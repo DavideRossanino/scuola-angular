@@ -1,0 +1,45 @@
+
+<div>
+    <h2>Lista Studenti</h2>
+    <!-- questo blocco definisce tutta 
+    la lista degli studenti -->
+    <div class="student-list">
+        <!-- questo invece definisce il
+        blocco di un singolo studente.
+        BLOCCO da ripetere che visualizza
+        la 'card' di un singolo studente -->
+
+        
+             <!-- <div class="student-card"
+        *ngFor="let student of studentList"
+        >
+            {{ student.name}}
+        </div> -->
+        
+
+        <!-- ng*For  funziona su tutto, sia
+        sui tag che su gli elementi, o componenti.
+        Vado ad istanziare tanti componenti
+        di tipo student-card  quanti sono gli studenti
+        usando *ngFor -->
+        <!-- 
+        BLOCCO (componente) da ripetere che visualizza
+        la 'card' di un singolo studente
+     -->
+        <app-student-card
+            *ngFor="let s of studentList"
+            [student]="s"
+        >
+        <!-- [student]   è il property binding, cioè vado
+        ad associare ad una proprietà di questo elemento
+        ('student'  in questo caso). 
+        L'ho posso fare perchè nel componet 'student-card.ts'
+        è stato detto  '@Input() student!: Student' .
+        Vado ad associare questa proprietà 'student' 
+        del componente 'card'  il valore  's' presente
+        nel 'student-list.component.html', che itera una
+        lista di oggetti di tipo 'studentList'
+        UN GIRO DELLE BALLE -->
+        </app-student-card>
+    </div>
+</div>

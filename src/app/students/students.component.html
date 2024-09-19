@@ -1,0 +1,14 @@
+
+<div class="students-container">
+    <!-- event binding =>  l'event emitter 'studentAdd'
+    quando viene triggherato manderà tramite "$event"
+    il valore (il risultato della composizione di un
+    oggetto di tipo Student, utilizzando i dati che
+    gestisce tramite i vari input) che noi prendiamo
+    e passiamo al nostro metodo onAddStudent tramite 
+    il parametro -->
+    <app-student-form (studentAdd)="onAddStudent($event)"></app-student-form>
+    <!-- 3) Non ci resta nient'altro da fare
+    che passare i dati tramite property binding -->
+    <app-student-list [studentList]="students"></app-student-list>
+</div>

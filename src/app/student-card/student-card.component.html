@@ -1,0 +1,33 @@
+
+<div class="student-card">
+    <!-- Creiamo dei blocchi per ogni 
+    proprietà dello studente -->
+    <div class="student-name">
+
+        {{ student.name }}
+    </div>
+    <div class="student-class">
+        {{ student.classRoom }}
+    </div>
+    <div class="student-grades">
+        Ita {{ student.ita }}
+        Mate {{ student.mate }}
+        Ing {{ student.ing }}
+        Info {{ student.info }}
+    </div>
+    <!-- mi creo un blocco div, dove andrò
+    a visualizzare la media degli studenti -->
+    <div class="Media">
+       <!-- <button (click)="media()">Calcola</button>Media -->
+       Media {{ media() }}
+    </div>
+    <!-- è un blocco div per l'esito.
+    Come si nota non abbiamo le proprietà 'media'
+    ed 'esito', perchè è un dato che otterremo
+    calcolando quelli già esistenti, e non ha senso
+    metterlo se possiamo ottenerlo dagli altri
+    dati già esistenti -->
+    <div>
+        Esito
+    </div>
+</div>

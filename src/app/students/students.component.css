@@ -1,0 +1,23 @@
+
+.students-container {
+
+    display: flex;
+    gap: 3rem;
+    width: 80vw;
+    margin: auto;
+}
+
+/* l'asterisco (*) vuole indicare di
+prendere tutti gli elementi che sono
+DIRETTAMENTE sotto un elemento di 
+classe 'students-container' e applica
+le regole */
+.students-container > * {
+
+    flex: 1;
+    
+}
+
+/* in CSS le regole vanno prima in 
+importanza di SPECIFICITA' (Specificity).
+E dopo a cascata */
